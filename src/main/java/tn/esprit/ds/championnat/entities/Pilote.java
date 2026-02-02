@@ -1,4 +1,4 @@
-package tn.esprit.entities;
+package tn.esprit.ds.championnat.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -26,5 +26,5 @@ public class Pilote {
     private Equipe equipe;
 
     @OneToMany(mappedBy = "pilote", cascade = CascadeType.ALL)
-    private List<tn.esprit.entities.Position> positions;
+    private List<Position> positions;
 }

@@ -20,9 +20,9 @@ public class Course {
     private String emplacement;
     private LocalDate dateCourse;
 
-    @ManyToOne
-    private Championnat championnat;
+    @ManyToMany(mappedBy = "courses")
+    private List<Championnat> championnats;
 
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
-    private List<tn.esprit.entities.Position> positions;
+    private List<Position> positions;
 }

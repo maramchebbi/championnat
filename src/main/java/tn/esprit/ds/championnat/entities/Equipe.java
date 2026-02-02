@@ -23,7 +23,7 @@ public class Equipe {
     private Integer classementGeneral;
 
     @OneToMany(mappedBy = "equipe", cascade = CascadeType.ALL)
-    private List<tn.esprit.entities.Pilote> pilotes;
+    private List<tn.esprit.ds.championnat.entities.Pilote> pilotes;
 
     @OneToMany(mappedBy = "equipe", cascade = CascadeType.ALL)
     private List<Contract> contrats;

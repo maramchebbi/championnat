@@ -2,6 +2,8 @@ package tn.esprit.ds.championnat.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import tn.esprit.ds.championnat.enums.Categorie;
+
 import java.util.List;
 
 @Entity
@@ -23,8 +25,13 @@ public class Championnat {
     private Integer annee;
 
     @OneToOne
-    private tn.esprit.entities.DetailChampionnat detailChampionnat;
+    private DetailChampionnat detailChampionnat;
 
-    @OneToMany(mappedBy = "championnat", cascade = CascadeType.ALL)
+    @ManyToMany
+    @JoinTable(
+            name = "championnat_course",
+            joinColumns = @JoinColumn(name = "championnat_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
     private List<Course> courses;
 }

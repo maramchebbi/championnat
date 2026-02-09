@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import tn.esprit.ds.championnat.entities.Contract;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -25,4 +26,7 @@ public class Sponsor {
 
     @OneToMany(mappedBy = "sponsor", cascade = CascadeType.ALL)
     private List<Contract> contrats;
+    boolean archived;
+    LocalDate dateCreation;
+    LocalDate DateDerniereModification;
 }

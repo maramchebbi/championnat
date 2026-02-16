@@ -7,8 +7,10 @@ import tn.esprit.ds.championnat.repository.SponsorRepository;
 
 import java.util.List;
 
+@Service
 @RequiredArgsConstructor
-public class SponsorService implements ISponsorService {
+
+public class SponsorServiceImpl implements ISponsorService {
 
     private final SponsorRepository sponsorRepository;
 

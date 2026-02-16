@@ -5,8 +5,10 @@ import org.springframework.stereotype.Service;
 import tn.esprit.ds.championnat.entities.Equipe;
 import tn.esprit.ds.championnat.repository.EquipeRepository;
 
+@Service
 @RequiredArgsConstructor
-public class EquipeService implements IEquipeService {
+
+public class EquipeServiceImpl implements IEquipeService {
 
     private final EquipeRepository equipeRepository;
 

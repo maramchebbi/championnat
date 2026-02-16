@@ -5,8 +5,10 @@ import org.springframework.stereotype.Service;
 import tn.esprit.ds.championnat.entities.Pilote;
 import tn.esprit.ds.championnat.repository.PiloteRepository;
 
+@Service
 @RequiredArgsConstructor
-public class PiloteService implements IPiloteService {
+
+public class PiloteServiceImpl implements IPiloteService {
 
     private final PiloteRepository piloteRepository;
 

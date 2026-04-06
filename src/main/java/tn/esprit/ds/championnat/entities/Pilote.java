@@ -17,6 +17,7 @@ public class Pilote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPilote;
+    private String categorie;
 
     private String libelle;
     private Integer nbPointsTotal;
